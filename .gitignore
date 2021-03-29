@@ -1,0 +1,16 @@
+node_modules
+*.log
+
+.idea
+*.iml
+
+.DS_Store
+.vagrant
+
+# Visual Studio Code
+.vscode
+jsconfig.json
+
+npm-debug.log*
+.env
+.env.*
