@@ -1,6 +1,15 @@
 const mongoose = require('mongoose')
 const Vehicles = require('../database/schemas/vehicle')
 
+
+const getData = async(req,res)=>{
+    try{
+        const posts = await Vehicles.find();
+        res.json(posts);
+    } catch(err){
+        res.json({message:err});
+    }
+}
 const getById = async (req, res) => {
     try {
         const id = req.params.id
@@ -91,3 +100,4 @@ const incDecCount = async (req, res, next) => {
 module.exports.getById = getById
 module.exports.setCount = setCount
 module.exports.incDecCount = incDecCount
+module.exports.getData = getData

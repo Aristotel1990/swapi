@@ -1,6 +1,14 @@
 const mongoose = require('mongoose')
 const Starship = require('../database/schemas/starship')
 
+const getData = async(req,res)=>{
+    try{
+        const posts = await Starship.find();
+        res.json(posts);
+    } catch(err){
+        res.json({message:err});
+    }
+}
 const getById = async (req, res) => {
     try {
         const id = req.params.id
@@ -91,3 +99,4 @@ const incDecCount = async (req, res, next) => {
 module.exports.getById = getById
 module.exports.setCount = setCount
 module.exports.incDecCount = incDecCount
+module.exports.getData = getData

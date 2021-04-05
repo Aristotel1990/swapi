@@ -69,6 +69,7 @@ const run = async () => {
         }
     } catch(e) {
         console.error(e);
+        
     }
     // collect swapi data
     const vehicles = await vehiclesGrab()
@@ -83,7 +84,6 @@ const run = async () => {
     await Vehicles.insertMany(vehicles)
     await Starships.insertMany(starships)
     console.log('Database Populated !')
-    return process.exit()
+    
 }
-
-run()
+module.exports.run = run
