@@ -86,4 +86,4 @@ const run = async () => {
     console.log('Database Populated !')
     
 }
-run()
+module.exports.run = run

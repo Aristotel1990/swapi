@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "seed": "node ./src/database/seed.js",
-    "start": "node index.js $ node ./src/database/seed.js ",
+    "start": "node index.js ",
     "local": "nodemon index.js"
   },
   "repository": {
