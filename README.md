@@ -28,8 +28,8 @@ npm i
 
 Polupate the DB
 
-```bash
-npm run seed
+```
+You can populate the db from frontend
 ```
 
 start the server
